@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Specly: An Electronics Web Store – SWE321 Project</title>
+<style>
+:root{--ink:#1d1b17;--muted:#6b665c;--bg:#faf7f0;--card:#ffffff;--line:#e4dccb;--accent:#44403a;--soft:#f3ead7;--link:#2b5fa8}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--link)}
+.top{position:sticky;top:0;z-index:10;background:rgba(250,247,240,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.top .in{max-width:1080px;margin:0 auto;padding:10px 24px;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:.2px;margin-right:auto}
+.top a{text-decoration:none;color:var(--ink);font-size:14px;padding:4px 2px;border-bottom:2px solid transparent}
+.top a:hover{border-bottom-color:var(--accent)}
+.hero{background:var(--accent);color:#f6efe0}
+.hero .in{max-width:1080px;margin:0 auto;padding:64px 24px 56px}
+.hero small{letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.15;margin:10px 0 12px}
+.hero p{max-width:640px;margin:0 0 22px;opacity:.92}
+.btn{display:inline-block;background:#f6efe0;color:#1d1b17;text-decoration:none;font-weight:600;padding:11px 20px;border-radius:999px;margin-right:10px}
+.btn.alt{background:transparent;color:#f6efe0;border:1px solid #f6efe0aa}
+main{max-width:1080px;margin:0 auto;padding:12px 24px 60px}
+section{padding-top:36px}
+h2{font-size:30px;margin:0 0 6px;padding-bottom:10px;border-bottom:2px solid var(--accent)}
+h3{font-size:22px;margin:42px 0 10px}
+h4.gr1-h{font-size:20px;margin:36px 0 8px}
+h5{font-size:17px;margin:26px 0 6px}
+h6{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:18px 0 4px}
+p{margin:0 0 12px}ul,ol{margin:0 0 14px;padding-left:24px}li{margin:3px 0}
+.finding{margin:18px 0 4px}
+.lede{color:var(--muted);margin:8px 0 0}
+.table-wrap{overflow-x:auto;margin:10px 0 20px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:9px 13px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+thead th{background:var(--soft)}tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+tbody th{background:#fbf6ea;white-space:nowrap;width:1%}
+.fig{margin:16px 0}.fig img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff}
+figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+.shot{margin:28px 0;padding:16px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.shot img{width:100%;max-width:760px;height:auto;display:block;margin:10px auto 12px;border:1px solid var(--line);border-radius:6px}
+.cap-top{font-size:15px;font-weight:600;color:var(--ink);margin:0}
+.patterns{font-size:14.5px;margin:0}
+.todo{border:2px dashed #c0392b;background:#fff4f1;border-radius:10px;padding:14px 16px;color:#7a1f14}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center;padding:22px}
+@media(max-width:640px){.top .in{gap:14px}th,td{padding:8px 9px}}
+@media print{.top{display:none}.hero{color:#000;background:#fff}.hero .in{padding:20px 0}.btn{display:none}.shot{break-inside:avoid}}
+
+ol li a{word-break:break-all}
+</style></head><body>
+<div class="top"><div class="in"><span class="brand">Specly</span>
+<a href="#top">Overview</a><a href="#gr1">GR1 Analysis</a><a href="#gr2">GR2 Computer Prototype</a>
+<a href="#gr2-start">Start-up</a><a href="#gr2-screens">Screenshots</a></div></div>
+<header class="hero" id="top"><div class="in">
+<small>SWE321 · Advanced User Interface Design · Al Yamamah University</small>
+<h1>Specly: An Electronics Web Store</h1>
+<a class="btn" href="https://www.figma.com/proto/9dIl3ClH72CtV0IYgGiPCJ/Starter-Kit?node-id=342-21478&amp;p=f&amp;t=T2BYkJUaETlZ4Ldh-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=11%3A3&amp;starting-point-node-id=342%3A21478" target="_blank" rel="noopener">Open the interactive prototype</a><a class="btn alt" href="#gr2">GR2 Computer Prototype</a>
+</div></header>
+<main>
+<section id="gr1"><h2>GR1: Project Proposal and Analysis</h2>
+<h4 class="gr1-h">Group Members</h4>
+<div class="table-wrap"><table><thead><tr><th><strong>#</strong></th><th><strong>Name</strong></th><th><strong>Student ID</strong></th></tr></thead><tbody><tr><td>1</td><td>Hala Alfardan</td><td>202212973</td></tr><tr><td>2</td><td>Asma Sardar</td><td>202312547</td></tr><tr><td>3</td><td>Rana Alshehri</td><td>202312555</td></tr><tr><td>4</td><td>Leena Albakawi</td><td>202312520</td></tr></tbody></table></div>
+<h4 class="gr1-h">Problem Statement</h4>
+<p>Users shopping for electronics online want to find a product that meets their needs and confidently understand how their options differ. However, the large number of available products, complex filtering systems, and technical specifications can make this process difficult.</p>
+<p>Users may struggle to narrow down products using criteria that are relevant to their needs, such as battery life, display quality, storage, or performance. Product information can also be difficult to interpret when it contains unfamiliar technical terminology or is presented across different sections or pages.</p>
+<p>Comparing products presents another challenge. Users may need to move between multiple product pages or browser tabs, remember specifications, and manually identify differences between products. This increases the amount of information users must process and makes it more difficult to determine which products best match their needs.</p>
+<p>These challenges can affect users with different levels of technical knowledge and familiarity with electronics. Dense layouts, small text, technical language, and large amounts of information can further increase the difficulty for older users, less technically experienced users, and users with accessibility needs.</p>
+<p>As a result, users may spend considerable time searching, interpreting product information, and comparing alternatives before they can make a confident purchasing decision.</p>
+<p>Our goal is to design an electronics shopping interface that helps users of all levels of technical knowledge find relevant products, understand what specifications mean, and compare alternatives side by side, so they can reach a confident purchasing decision with less time and effort.</p>
+<h4 class="gr1-h">GR1 Analysis</h4>
+<h4 class="gr1-h">1. User Research</h4>
+<h5>Method</h5>
+<p>To inform our user and task analysis, we interviewed and observed three representative users: two Casual Shoppers and one Tech Enthusiast. Each session began with a short interview about participants&#x27; online electronics shopping habits, followed by an observation in which they completed realistic tasks on existing e-commerce websites such as Amazon, Noon, and Jarir: finding a suitable product, evaluating it, and comparing two products.</p>
+<h5>Participants</h5>
+<div class="table-wrap"><table><thead><tr><th><strong>Participant</strong></th><th><strong>User class</strong></th><th><strong>Age</strong></th><th><strong>Background</strong></th><th><strong>Main device</strong></th><th><strong>Shopping frequency</strong></th></tr></thead><tbody><tr><td><strong>P1</strong></td><td>Casual Shopper</td><td>24</td><td>Non-technical</td><td>Mobile phone</td><td>2–3 times a year</td></tr><tr><td><strong>P2</strong></td><td>Tech Enthusiast</td><td>21</td><td>Software Engineering student</td><td>Laptop</td><td>Every few months</td></tr><tr><td><strong>P3</strong></td><td>Casual Shopper</td><td>50</td><td>Non-technical</td><td>Mobile phone</td><td>1–2 times a year</td></tr></tbody></table></div>
+<h5>Findings</h5>
+<p class="finding"><strong>Finding 1 – Casual shoppers start with simple decision criteria.</strong></p>
+<p>Both casual participants (P1 and P3) focused on price, ratings, and reviews rather than technical specifications. P1 applied the price filter first and did not use technical filters, while P3 searched with broad terms and described the number of available options as one of the hardest parts of choosing a device.</p>
+<p class="finding"><strong>Finding 2 – Technical terminology is a barrier for less experienced users.</strong></p>
+<p>Both casual participants had difficulty understanding specifications. P1 described “too many numbers and technical terms” as the main challenge, and during observation she asked what refresh rate meant before returning to the reviews. P3 reported not knowing what many specifications mean and needed clarification when she encountered unfamiliar terms during the tasks.</p>
+<p class="finding"><strong>Finding 3 – Tech enthusiasts evaluate products against specific technical requirements.</strong></p>
+<p>P2 described first deciding on the specifications he needed and then comparing several models. During observation, he went directly to the processor, RAM, and storage filters and spent more time on technical details than on ratings.</p>
+<p class="finding"><strong>Finding 4 – Comparing products relies on switching between pages and memory.</strong></p>
+<p>None of the participants had a way to view products side by side. P1 switched between product pages and reported sometimes forgetting the specifications of the first product. P2 opened multiple browser tabs and compared specifications manually. P3 did not compare specifications in detail, explaining that there were too many to go through, and relied on the main information and reviews instead.</p>
+<p class="finding"><strong>Finding 5 – Incomplete and inconsistent specifications affect technical users.</strong></p>
+<p>P2 identified finding all specifications in one place as his main difficulty, noting that specifications are sometimes incomplete or presented differently across websites.</p>
+<p class="finding"><strong>Finding 6 – Users shop on different devices.</strong></p>
+<p>Both casual participants (P1 and P3) shop mainly on their phones because they find it faster and easier, while P2 prefers a laptop because it makes comparing specifications easier. The interface therefore needs to support searching and comparing on small screens as well as on desktop.</p>
+<p class="finding"><strong>Finding 7 – Language preference is linked to technical familiarity.</strong></p>
+<p>P1 and P3 preferred Arabic because it made product information and technical terms easier to understand, while P2 preferred English because most technical information and reviews are available in English.</p>
+<p class="finding"><strong>Finding 8 – Users rely on sources outside the store before deciding.</strong></p>
+<p>All three participants looked beyond the product page when uncertain. P1 used Google, YouTube reviews, and friends&#x27; experiences; P2 used reviews and YouTube benchmarks; and P3 asked family members for help choosing a product.</p>
+<h5>Limitations</h5>
+<p>Our sample was small (three participants) and included only one Tech Enthusiast, so findings about that user class (Findings 3 and 5) should be treated as preliminary. All participants were located in Saudi Arabia and familiar with the same local stores, which may not represent users in other markets. We plan to include more participants from both user classes during later evaluation stages.</p>
+<h4 class="gr1-h">2. User Analysis</h4>
+<h5>General Characteristics</h5>
+<ul>
+<li><strong>Age:</strong> Our participants ranged from 21 to 50, and the target population includes young adults as well as middle-aged and older shoppers.</li>
+<li><strong>Devices:</strong> Non-technical users mainly shop on mobile phones (P1, P3), while technical users prefer laptops for comparing specifications (P2).</li>
+<li><strong>Purchase frequency:</strong> Electronics are bought infrequently by casual users (1–3 times a year, P1 and P3), so they rarely build up knowledge of specifications between purchases.</li>
+<li><strong>Language:</strong> Non-technical users prefer Arabic (P1, P3), while technical users prefer English because most technical information is in English (P2).</li>
+<li><strong>Stores used:</strong> Participants commonly shop on Amazon, Noon, and Jarir.</li>
+<li><strong>External sources:</strong> All participants consult sources outside the store before deciding, such as YouTube, Google, friends, or family (P1–P3).</li>
+</ul>
+<h5>User Class 1: Casual Shopper</h5>
+<ul>
+<li><strong>Goal:</strong> Find a suitable product quickly and confidently.</li>
+<li><strong>Technical knowledge:</strong> Low familiarity with specifications and technical terms.</li>
+<li><strong>Main device and language:</strong> Mobile phone; prefers Arabic.</li>
+<li><strong>Decision criteria:</strong> Price, ratings, reviews, and advice from friends or family.</li>
+<li><strong>Main difficulties:</strong> Understanding which specifications matter and what they mean, and dealing with too many options.</li>
+<li><strong>Evidence:</strong> P1 started with the price filter and asked what refresh rate meant; P3 described the number of options as one of the hardest parts of choosing and relied on family members for help.</li>
+</ul>
+<h5>User Class 2: Tech Enthusiast</h5>
+<ul>
+<li><strong>Goal:</strong> Find and evaluate products against specific technical requirements.</li>
+<li><strong>Technical knowledge:</strong> High familiarity with specifications and electronics terminology.</li>
+<li><strong>Main device and language:</strong> Laptop; prefers English.</li>
+<li><strong>Decision criteria:</strong> Detailed specifications such as processor, RAM, storage, display, and battery, supported by reviews and benchmarks.</li>
+<li><strong>Main difficulties:</strong> Incomplete or inconsistent specifications, and comparing products manually across pages.</li>
+<li><strong>Evidence:</strong> P2 went directly to the processor, RAM, and storage filters, compared products across multiple browser tabs, and identified finding all specifications in one place as his main difficulty.</li>
+</ul>
+<h4 class="gr1-h">3. Task Analysis</h4>
+<h5>Task 1: Find a Product</h5>
+<h6>Goal</h6>
+<p>The user wants to locate one or more products that match their needs from the available product catalog.</p>
+<h6>Preconditions</h6>
+<ul>
+<li>The user has accessed the website.</li>
+<li>The user has a general idea of what they are looking for, such as a product category, brand, use case, or specific product.</li>
+</ul>
+<h6>Subtasks</h6>
+<ol>
+<li>Enter a search term or browse by product category.</li>
+<li>Review the initial set of results.</li>
+<li>Apply filters to narrow the results, such as price, brand, or product specifications.</li>
+<li>Scan product cards for relevant information such as product name, price, rating, and key specifications.</li>
+<li>Select one or more products for further evaluation.</li>
+</ol>
+<h6>Frequency of Use</h6>
+<p>Performed at the start of a shopping session. Casual participants buy electronics 1–3 times a year (P1, P3), while the Tech Enthusiast buys every few months (P2).</p>
+<h6>Time Constraints</h6>
+<p>Users need to locate relevant products without having to process an unnecessarily large number of results.</p>
+<h6>Exceptions</h6>
+<ul>
+<li>The search returns no relevant results.</li>
+<li>The results contain too many irrelevant products.</li>
+<li>Available filters do not include criteria relevant to the user&#x27;s needs.</li>
+<li>The desired product or category is unavailable.</li>
+<li>Too many options make it difficult to choose (reported by P3).</li>
+</ul>
+<h6>Differences Between User Classes</h6>
+<div class="table-wrap"><table><thead><tr><th></th><th><strong>Casual Shopper</strong></th><th><strong>Tech Enthusiast</strong></th></tr></thead><tbody><tr><td><strong>Starting point</strong></td><td>May browse by category or use broad search terms</td><td>May search for a specific model, brand, or technical requirement</td></tr><tr><td><strong>Filter usage</strong></td><td>More likely to use basic criteria such as price and brand</td><td>More likely to use detailed specifications such as processor, RAM, or display</td></tr><tr><td><strong>Product-card information</strong></td><td>Focuses on price, rating, image, and key features</td><td>Looks for relevant technical specifications and model information</td></tr><tr><td><strong>Device</strong></td><td>Mobile phone (P1, P3)</td><td>Laptop (P2)</td></tr></tbody></table></div>
+<h5>Task 2: Evaluate a Product</h5>
+<h6>Goal</h6>
+<p>The user wants to examine a product in detail and determine whether it meets their needs.</p>
+<h6>Preconditions</h6>
+<ul>
+<li>The user has identified a product of interest.</li>
+<li>The product has an accessible product page.</li>
+</ul>
+<h6>Subtasks</h6>
+<ol>
+<li>Open the product detail page.</li>
+<li>View product images.</li>
+<li>Read the product description and key features.</li>
+<li>Review technical specifications.</li>
+<li>Read ratings and user reviews.</li>
+<li>Determine whether the product meets the user&#x27;s requirements.</li>
+<li>Decide whether to purchase the product, add it to a comparison, or return to the results.</li>
+</ol>
+<h6>Frequency of Use</h6>
+<p>May be performed for multiple products during a shopping session, particularly when the user is considering several alternatives.</p>
+<h6>Time Constraints</h6>
+<p>Information should be presented in a way that allows users to locate and understand important details without unnecessary navigation between sections or pages.</p>
+<h6>Exceptions</h6>
+<ul>
+<li>Important specifications are missing (reported by P2).</li>
+<li>Product information is unclear or inconsistent.</li>
+<li>Reviews or ratings are unavailable.</li>
+<li>Technical terminology is difficult to understand (P1 asked about refresh rate; P3 needed clarification).</li>
+<li>Product images do not provide sufficient information about the product.</li>
+</ul>
+<h6>Differences Between User Classes</h6>
+<div class="table-wrap"><table><thead><tr><th></th><th><strong>Casual Shopper</strong></th><th><strong>Tech Enthusiast</strong></th></tr></thead><tbody><tr><td><strong>Main focus</strong></td><td>Price, ratings, reviews, images, and key features</td><td>Detailed technical specifications and performance-related information</td></tr><tr><td><strong>Interpretation of specifications</strong></td><td>Needs simpler explanations of technical terms; P1 returned to reviews after not understanding refresh rate</td><td>Interprets specifications independently (P2)</td></tr><tr><td><strong>Evaluation approach</strong></td><td>Considers overall suitability and trust signals</td><td>Checks specifications against specific requirements</td></tr><tr><td><strong>Information preference</strong></td><td>Clear and concise information</td><td>Detailed and complete information</td></tr><tr><td><strong>When uncertain</strong></td><td>Asks friends or family, or searches Google and YouTube (P1, P3)</td><td>Checks reviews and YouTube benchmarks (P2)</td></tr></tbody></table></div>
+<h5>Task 3: Compare Products</h5>
+<h6>Goal</h6>
+<p>The user wants to compare two or more products and identify the differences that are relevant to their decision.</p>
+<h6>Preconditions</h6>
+<ul>
+<li>The user has identified at least two products they are considering.</li>
+</ul>
+<h6>Subtasks</h6>
+<ol>
+<li>Select products for comparison.</li>
+<li>Open the comparison view.</li>
+<li>Review products side by side.</li>
+<li>Compare relevant attributes such as price, specifications, ratings, and features.</li>
+<li>Identify meaningful differences between the products.</li>
+<li>Determine which product better matches the user&#x27;s requirements.</li>
+<li>Proceed to purchase, continue browsing, or return to product evaluation.</li>
+</ol>
+<h6>Frequency of Use</h6>
+<p>May be performed when users are considering multiple products, with frequency depending on the user&#x27;s shopping approach and the number of suitable alternatives.</p>
+<h6>Time Constraints</h6>
+<p>The comparison should allow users to identify important differences without repeatedly switching between separate product pages.</p>
+<h6>Exceptions</h6>
+<ul>
+<li>Products have few attributes in common.</li>
+<li>One or more products have incomplete specifications.</li>
+<li>Too many products are added, making the comparison difficult to process.</li>
+<li>Important differences are difficult to identify from the presented information.</li>
+</ul>
+<h6>Differences Between User Classes</h6>
+<div class="table-wrap"><table><thead><tr><th></th><th><strong>Casual Shopper</strong></th><th><strong>Tech Enthusiast</strong></th></tr></thead><tbody><tr><td><strong>Products compared</strong></td><td>A small number of alternatives</td><td>May compare several alternatives</td></tr><tr><td><strong>Main attributes</strong></td><td>Price, ratings, brand, key features</td><td>Processor, RAM, storage, display, battery, and other detailed specifications</td></tr><tr><td><strong>Comparison approach</strong></td><td>Relies on main information and reviews rather than specifications (P3)</td><td>Compares specifications manually across browser tabs (P2)</td></tr><tr><td><strong>Main difficulty</strong></td><td>Remembering specifications across pages (P1); too many specifications to compare (P3)</td><td>Inconsistent or incomplete specifications across websites (P2)</td></tr></tbody></table></div>
+<h5>Task 4: Purchase a Product</h5>
+<h6>Goal</h6>
+<p>The user wants to complete the purchase of a selected product.</p>
+<h6>Preconditions</h6>
+<ul>
+<li>The user has selected a product to purchase.</li>
+<li>The product is available for purchase.</li>
+<li>The user has the information required to complete checkout.</li>
+</ul>
+<h6>Subtasks</h6>
+<ol>
+<li>Add the product to the shopping cart.</li>
+<li>Review the cart, including product, quantity, and price.</li>
+<li>Proceed to checkout.</li>
+<li>Enter or confirm shipping information.</li>
+<li>Select a payment method and provide the required payment information.</li>
+<li>Review the order summary.</li>
+<li>Confirm and place the order.</li>
+<li>Receive an order confirmation.</li>
+</ol>
+<h6>Frequency of Use</h6>
+<p>Generally performed after the user has selected a product and decided to purchase it.</p>
+<h6>Time Constraints</h6>
+<p>Users need to be able to complete checkout without unnecessary steps or navigation. Important costs and order information should be visible before the order is confirmed.</p>
+<h6>Exceptions</h6>
+<ul>
+<li>The selected product becomes unavailable.</li>
+<li>Payment is declined or cannot be completed.</li>
+<li>Shipping is unavailable to the user&#x27;s location.</li>
+<li>Additional costs appear during checkout.</li>
+<li>Required checkout information is missing or invalid.</li>
+<li>The user&#x27;s session expires before the purchase is completed.</li>
+</ul>
+<h6>Differences Between User Classes</h6>
+<div class="table-wrap"><table><thead><tr><th></th><th><strong>Casual Shopper</strong></th><th><strong>Tech Enthusiast</strong></th></tr></thead><tbody><tr><td><strong>Information checked before purchase</strong></td><td>May recheck price, reviews, and key features</td><td>May recheck selected specifications and product configuration</td></tr><tr><td><strong>Checkout preference</strong></td><td>Clear, straightforward process</td><td>Efficient process with sufficient order and product details</td></tr><tr><td><strong>Potential concern</strong></td><td>Uncertainty about whether the selected product meets their needs</td><td>Ensuring the selected model/configuration is correct</td></tr></tbody></table></div>
+<h4 class="gr1-h">4. Domain Analysis</h4>
+<p>The following table describes the key entities in the system, their relationships, and the multiplicity of each relationship.</p>
+<div class="table-wrap"><table><thead><tr><th><strong>Relationship</strong></th><th><strong>Multiplicity</strong></th><th><strong>Meaning</strong></th></tr></thead><tbody><tr><td><strong>Category → Product</strong></td><td>1 : many</td><td>One category has many products, and each product belongs to one category</td></tr><tr><td><strong>Category → Specification Type</strong></td><td>1 : many</td><td>Each category decides which specifications apply to it (laptops have RAM, headphones don&#x27;t)</td></tr><tr><td><strong>Specification Type → Specification</strong></td><td>1 : many</td><td>One type (like “RAM”) has a value for many products</td></tr><tr><td><strong>Product → Specification</strong></td><td>1 : many</td><td>Each product has many specifications (for example, RAM = 16 GB)</td></tr><tr><td><strong>User → Review</strong></td><td>1 : many</td><td>A user can write many reviews</td></tr><tr><td><strong>Product → Review</strong></td><td>1 : many</td><td>A product can have many reviews</td></tr><tr><td><strong>User → Cart</strong></td><td>1 : 1</td><td>Each user has one active cart</td></tr><tr><td><strong>Cart → CartItem</strong></td><td>1 : many</td><td>A cart can hold many items</td></tr><tr><td><strong>Product → CartItem</strong></td><td>1 : many</td><td>A product can be in many users&#x27; carts</td></tr><tr><td><strong>User → Order</strong></td><td>1 : many</td><td>A user can place many orders</td></tr><tr><td><strong>Order → OrderItem</strong></td><td>1 : 1..many</td><td>Every order has at least one item</td></tr><tr><td><strong>Product → OrderItem</strong></td><td>1 : many</td><td>A product can be in many orders</td></tr><tr><td><strong>User → Comparison</strong></td><td>1 : many</td><td>A user can create many comparisons</td></tr><tr><td><strong>Comparison → Product</strong></td><td>many : many</td><td>A comparison has several products, and a product can be in many comparisons</td></tr></tbody></table></div>
+<h5>Entity Definitions</h5>
+<p><strong>Specification:</strong> One piece of technical information about a product, like “Battery life: 10 hours”. It has a name, a value, and a unit. Users filter and compare products using specifications.</p>
+<p><strong>Specification Type:</strong> The list of specifications that belong to a category. For example, laptops have RAM and processor, but headphones don&#x27;t. This lets the filters and comparison table change based on the product type.</p>
+<p><strong>Comparison:</strong> A group of products the user chooses to see side by side. We limit it to 4 products so it stays easy to read, and all products should be from the same category.</p>
+<p><strong>Cart:</strong> The products a user wants to buy but hasn&#x27;t paid for yet. Each user has one active cart.</p>
+<p><strong>CartItem and OrderItem:</strong> These connect a product to a cart or an order and save the quantity. OrderItem also saves the price the user paid, because the product price can change later.</p>
+<figure class="fig"><img src="images/gr1-erd.png" alt="Entity-relationship diagram of the electronics shop">
+<figcaption>Figure 1: Entity-relationship diagram of the electronics shopping domain .</figcaption></figure>
+</section>
+<section id="gr2"><h2>GR2 Computer Prototype</h2>
+<h3 id="gr2-platform">1. Platform and software requirements</h3>
+<p>The system is a web-based application that can be accessed using a web browser. No installation is required on the user&#x27;s device.</p>
+<div class="table-wrap"><table><tbody><tr><th>Platform</th><td>Desktop or laptop computer. The interface was designed in Figma and optimized for desktop use only.</td></tr><tr><th>Operating System</th><td>Windows 10/11, macOS, or Linux. The system runs in the browser, so it doesn&#x27;t depend on a specific operating system.</td></tr><tr><th>Browser</th><td>A recent version of Google Chrome, Microsoft Edge, Mozilla Firefox, or Safari</td></tr><tr><th>Screen Size</th><td>Designed for a resolution of 1440 × 900.</td></tr><tr><th>Account / internet</th><td>No account, login or installation is needed. An internet connection is required.</td></tr></tbody></table></div>
+
+<h3 id="gr2-start">2. Start-up instructions</h3>
+<ol>
+<li>Open the prototype link in your browser: <a href="https://www.figma.com/proto/9dIl3ClH72CtV0IYgGiPCJ/Starter-Kit?node-id=342-21478&amp;p=f&amp;t=T2BYkJUaETlZ4Ldh-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=11%3A3&amp;starting-point-node-id=342%3A21478" target="_blank" rel="noopener">Specly interactive prototype (Figma)</a></li>
+<li>The prototype opens in prototype mode on the Specly Home page. No setup or screen selection is needed, because it fits the browser window automatically.</li>
+<li>Click to move around the store. You can use the header menu (Phones, Laptops, Tablets, TVs, Compare, Cart), product cards, breadcrumbs at the top of each page, and the footer links.</li>
+<li>Use the "Task scenarios" section below for what to try in each of the four tasks (Find a Product, Evaluate a Product, Compare Products, Purchase a Product).</li>
+<li>Some items show help or feedback when you interact with them. For example, a message appears when you tick a product to compare, and the &quot;?&quot; next to Refresh Rate on the compare page explains the term when you hover over it.</li>
+<li>To go back, use the breadcrumbs or the &quot;Back&quot; links on the page. To start again from the beginning, click the Specly logo, or reload the link.</li>
+</ol>
+
+<h3 id="gr2-tasks">3. Task scenarios</h3>
+<h5>Task 1: Find a Product</h5>
+<p>You are looking for a laptop for university and want to find an option that fits your budget and requirements. Explore the available laptops and identify a suitable product.</p>
+<h5>Task 2: Evaluate a Product</h5>
+<p>You are considering purchasing a laptop but want to understand whether it is worth buying. Examine its product information, specifications, images, ratings, and customer reviews before deciding whether it meets your needs.</p>
+<h5>Task 3: Compare Products</h5>
+<p>You are considering three laptops and want to determine which one offers the best value for your needs. Select products for comparison, examine their prices, specifications, and features side by side, and decide which laptop you would choose.</p>
+<h5>Task 4: Purchase a Product</h5>
+<p>You have decided which laptop best suits your needs and are ready to buy it. Complete the checkout process and confirm your order.</p>
+
+<h3 id="gr2-shallow">4. Shallow parts</h3>
+<p>As required for a computer prototype with no backend, some responses are canned. Search and filters show fixed, pre-designed results, and the search bar does not accept typing. Products, prices, and reviews are sample data. At checkout, the address and payment method are pre-selected, and no real payment is made. Sign-in, quantity changes, pagination and the Arabic version are planned for later versions. Since Figma does not support user input, each exception path has its own screen, shown in the table below.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Task</th><th>Part</th><th>Status</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Task 1 – Find</td><td>Home, categories, search results</td><td>Interactive</td><td>Category cards, &quot;View all&quot; links, and breadcrumbs work</td></tr>
+<tr><td>Task 1 – Find</td><td>Search bar</td><td>Canned</td><td>Cannot be typed in; clicking it opens popular searches that lead to fixed results</td></tr>
+<tr><td>Task 1 – Find</td><td>Filters, sort, pagination</td><td>Static</td><td>Not linked</td></tr>
+<tr><td>Task 2 – Evaluate</td><td>Product page</td><td>Interactive</td><td>Image viewer, add to cart, compare, and the no-reviews and out-of-stock screens work</td></tr>
+<tr><td>Task 2 – Evaluate</td><td>Product details</td><td>Canned</td><td>Every product card opens the same product page</td></tr>
+<tr><td>Task 2 – Evaluate</td><td>Write a review, out-of-stock email</td><td>Static</td><td>The pop-ups open and close, but nothing can be submitted</td></tr>
+<tr><td>Task 3 – Compare</td><td>Compare bar and compare page</td><td>Interactive</td><td>Selecting products, the 4-product limit, the differences toggle, remove and undo, and the refresh-rate tooltip work</td></tr>
+<tr><td>Task 3 – Compare</td><td>Compared products</td><td>Canned</td><td>Always the same three laptops</td></tr>
+<tr><td>Task 4 – Purchase</td><td>Cart, remove and undo, checkout, place order</td><td>Interactive</td><td>The full flow from cart to order confirmation can be clicked through</td></tr>
+<tr><td>Task 4 – Purchase</td><td>Quantity (− / +)</td><td>Static</td><td>Not linked; quantity and totals don&#x27;t change</td></tr>
+<tr><td>Task 4 – Purchase</td><td>Checkout options</td><td>Static</td><td>Address, delivery, and payment options can&#x27;t be selected</td></tr>
+<tr><td>Task 4 – Purchase</td><td>Order details</td><td>Canned</td><td>Order number, delivery dates, and totals are fixed</td></tr>
+<tr><td>Task 3 – Compare</td><td>"Add to compare" ticks</td><td>Partly interactive</td><td>Work only on the first laptop cards of the main Laptops page, not on the filtered page</td></tr>
+<tr><td>Task 4 – Purchase</td><td>"Track order"</td><td>Static</td><td>Not linked</td></tr>
+<tr><td>Task 4 – Purchase</td><td>"Proceed to checkout" with an out-of-stock item</td><td>Blocked on purpose</td><td>Not linked, because the cart contains an item that is out of stock</td></tr>
+</tbody></table></div>
+<h5>Where to find the exception screens</h5>
+<div class="table-wrap"><table>
+<thead><tr><th>Task</th><th>Exception screen</th><th>How to reach it</th></tr></thead>
+<tbody>
+<tr><td>Task 1 – Find</td><td>No search results</td><td>Click the search box, then "iPhone 18 Pro"</td></tr>
+<tr><td>Task 2 – Evaluate</td><td>Product with no reviews</td><td>On a product page, under "More Like This", click the Microsoft Surface Laptop</td></tr>
+<tr><td>Task 2 – Evaluate</td><td>Out-of-stock product</td><td>Under "More Like This", click the Samsung Galaxy Book5 Pro; the red "Item Out of Stock" button opens a pop-up</td></tr>
+<tr><td>Task 3 – Compare</td><td>Limit reached (4 of 4)</td><td>On the Laptops page, tick four laptops one after another, starting from the first card</td></tr>
+<tr><td>Task 3 – Compare</td><td>Only one product left</td><td>On the compare page, click "Remove" on two of the three products</td></tr>
+<tr><td>Task 4 – Purchase</td><td>Cart with an out-of-stock item</td><td>On the out-of-stock product page, click "Cart" in the header</td></tr>
+<tr><td>Task 4 – Purchase</td><td>Item removed (Undo)</td><td>In the cart, click "Remove" on the iPad</td></tr>
+</tbody></table></div>
+
+
+<h3 id="gr2-rationale">5. Design Rationale Table</h3>
+<div class="table-wrap"><table><thead><tr><th><strong>Design decision</strong></th><th><strong>Principle or pattern</strong></th><th><strong>GR1 evidence</strong></th></tr></thead><tbody><tr><td>Compare page shows products side by side, with the specs in aligned rows</td><td>Recognition rather than recall</td><td>Finding 4: no participant could view products side by side. P1 switched between product pages and forgot the first product&#x27;s specs, and P2 opened several browser tabs</td></tr><tr><td>&quot;Show differences only&quot; toggle that hides identical rows</td><td>Aesthetic and minimalist design</td><td>Finding 4 and the Task 3 goal of seeing the important differences without switching pages. P3 did not compare specifications in detail because there were too many to go through</td></tr><tr><td>&quot;?&quot; next to Refresh Rate that explains the term on hover</td><td>Help and documentation </td><td>Finding 2: P1 asked what refresh rate meant during the observation, and P3 needed terms explained</td></tr><tr><td>Compare bar that stays visible while you scroll, with an &quot;added&quot; message after ticking a product</td><td>Visibility of system status</td><td>Finding 4: P1 forgot the specs of the first product, so showing the selected products at all times removes the need to remember</td></tr><tr><td>Notice when the limit of 4 products is reached</td><td>Error prevention</td><td>Task 3 analysis: casual users compare a small number of alternatives (P3 found many specifications too much to go through)</td></tr><tr><td>Undo message after removing an item</td><td>User control and freedom (Safe Exploration)</td><td>Casual users buy only 1–3 times a year (P1, P3), so they need a forgiving interface</td></tr><tr><td>Breadcrumbs and a highlighted header link on every page</td><td>Wayfinding (You-are-here signposts)</td><td>Finding 4: P1 switched between product pages, so users need to know where they are and how to return</td></tr></tbody></table></div>
+
+<h3 id="gr2-principles">6. How layout, navigation and feedback follow the principles</h3>
+<p><strong>Layout.</strong> Every page uses the same header, content width and footer, and products appear in an aligned grid of equal cards. On the compare page, the specifications are grouped under titled sections (Overview, Performance, Display, Battery, General) and aligned in rows, so the eye can move straight across a row to compare products. The product page puts one large image at center stage, with the description, similar products and reviews in separate titled sections.</p>
+<p><strong>Navigation.</strong> The header is the same on every page, and the link for the current section is highlighted so users always know where they are. Breadcrumbs show the path and let users go back to any earlier level, and the footer repeats the main sections, so every screen can be reached in a few clicks without using the browser's back button.</p>
+<p><strong>Feedback.</strong> The interface answers every action: ticking a product shows an "added" message and a compare bar that stays on screen, reaching the limit of four products shows a notice, removing an item shows an Undo message, and hovering over the "?" explains a technical term. Items that are out of stock are marked in red and with text, and offer a way to be notified.</p>
+
+<h3 id="gr2-taps">7. Count the Taps</h3>
+
+<h5>Task 1: Find a Product</h5>
+
+<p><strong>Scenario:</strong> Find a suitable laptop for university within a budget of SAR 1,000–3,000.</p>
+
+<h5>Before – Amazon.sa</h5>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>Clicks</th>
+        <th>Keystrokes</th>
+        <th>Screen Loads</th>
+        <th>Scrolls</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Click the search bar</td><td>1</td><td>-</td><td>-</td><td>-</td></tr>
+      <tr><td>Type in “Laptop”</td><td>-</td><td>6</td><td>-</td><td>-</td></tr>
+      <tr><td>Click the search button</td><td>1</td><td>-</td><td>1</td><td>-</td></tr>
+      <tr><td>Select the price range filter</td><td>1</td><td>-</td><td>1</td><td>1</td></tr>
+      <tr><td>Open a suitable laptop</td><td>1</td><td>-</td><td>1</td><td>-</td></tr>
+      <tr><th>Total</th><th>4</th><th>6</th><th>3</th><th>1</th></tr>
+    </tbody>
+  </table>
+</div>
+
+<h5>After – Specly</h5>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>Clicks</th>
+        <th>Keystrokes</th>
+        <th>Screen Loads</th>
+        <th>Scrolls</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Apply homepage quick filters</td><td>1</td><td>-</td><td>-</td><td>-</td></tr>
+      <tr><td>Click “Show Matching Products”</td><td>1</td><td>-</td><td>1</td><td>-</td></tr>
+      <tr><td>Open a suitable laptop</td><td>1</td><td>-</td><td>1</td><td>1</td></tr>
+      <tr><th>Total</th><th>3</th><th>0</th><th>2</th><th>1</th></tr>
+    </tbody>
+  </table>
+</div>
+
+<h5>Interaction count comparison</h5>
+
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Interaction</th>
+        <th>Before (Amazon.sa)</th>
+        <th>After (Specly)</th>
+        <th>Reduction</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Clicks</td><td>4</td><td>3</td><td>25%</td></tr>
+      <tr><td>Keystrokes</td><td>6</td><td>0</td><td>100%</td></tr>
+      <tr><td>Screen Loads</td><td>3</td><td>2</td><td>33.3%</td></tr>
+      <tr><td>Scrolls</td><td>1</td><td>1</td><td>0%</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>Specly reduces the overall interaction effort by eliminating the need to type a search query and reducing the number of clicks and screen loads. The homepage quick filters allow users to narrow down their product choices more directly, while the number of scrolls remains unchanged.</p>
+
+<h3 id="gr2-screens">8. Screenshots</h3>
+<figure class="shot"><figcaption class="cap-top">Task 1 – Find a Product: Home</figcaption><img src="images/task1-home.png" alt="Specly home page with budget and category chips, category cards and product rows"><p class="patterns"><strong>Patterns:</strong> Clear Entry Points (budget and category chips), Grid of Equals (category cards and product cards), visual hierarchy.</p></figure>
+<figure class="shot"><figcaption class="cap-top">Task 2 – Evaluate a Product: Product page</figcaption><img src="images/task2-product.png" alt="Product page for the Apple MacBook Air 13-inch with large image, description, similar products and reviews"><p class="patterns"><strong>Patterns:</strong> Center Stage (large product image), visual hierarchy, Titled Sections (description, More Like This, reviews).</p></figure>
+<figure class="shot"><figcaption class="cap-top">Task 3 – Compare Products: Compare page</figcaption><img src="images/task3-compare.png" alt="Compare page with three laptops side by side, a Show differences only toggle and a hover explanation of refresh rate"><p class="patterns"><strong>Patterns:</strong> alignment and grid (specs in aligned rows), chunking information (specs grouped by section), Help and documentation (&quot;?&quot; hover explanation), Aesthetic and minimalist design (&quot;Show differences only&quot;).</p></figure>
+<figure class="shot"><figcaption class="cap-top">Task 4 – Purchase a Product: Checkout</figcaption><img src="images/task4-checkout.png" alt="Checkout page with shipping address, delivery and payment sections and an order summary"><p class="patterns"><strong>Patterns:</strong> chunking information (three numbered sections), prefilled defaults (saved address, delivery and card pre-selected).</p></figure>
+</section>
+</main>
+<footer>SWE321 – Advanced User Interface Design · Al Yamamah University</footer>
+</body></html>
