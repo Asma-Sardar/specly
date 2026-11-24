@@ -342,8 +342,77 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-a
 <p><strong>Navigation.</strong> The header is the same on every page, and the link for the current section is highlighted so users always know where they are. Breadcrumbs show the path and let users go back to any earlier level, and the footer repeats the main sections, so every screen can be reached in a few clicks without using the browser's back button.</p>
 <p><strong>Feedback.</strong> The interface answers every action: ticking a product shows an "added" message and a compare bar that stays on screen, reaching the limit of four products shows a notice, removing an item shows an Undo message, and hovering over the "?" explains a technical term. Items that are out of stock are marked in red and with text, and offer a way to be notified.</p>
 
+
 <h3 id="gr2-taps">7. Count the Taps</h3>
-<div class="todo"><strong>To be added by the team before submission:</strong> the Count the Taps table (taps, keystrokes, screen loads and scrolls, before and after, for the most common task) and the note explaining how the "before" values were measured.</div>
+
+<h5>Task 1: Find a Product</h5>
+<p><strong>Scenario:</strong> Find a suitable laptop for university within a budget of SAR 1,000–3,000.</p>
+
+<h5>Before – Amazon.sa</h5>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Clicks</th>
+<th>Keystrokes</th>
+<th>Screen Loads</th>
+<th>Scrolls</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Click the search bar</td><td>1</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><td>Type in "Laptop"</td><td>–</td><td>6</td><td>–</td><td>–</td></tr>
+<tr><td>Click the search button</td><td>1</td><td>–</td><td>1</td><td>–</td></tr>
+<tr><td>Select the price range filter</td><td>1</td><td>–</td><td>1</td><td>1</td></tr>
+<tr><td>Open a suitable laptop</td><td>1</td><td>–</td><td>1</td><td>–</td></tr>
+<tr><th>Total</th><th>4</th><th>6</th><th>3</th><th>1</th></tr>
+</tbody>
+</table>
+</div>
+
+<h5>After – Specly</h5>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Clicks</th>
+<th>Keystrokes</th>
+<th>Screen Loads</th>
+<th>Scrolls</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>View preselected homepage quick filters</td><td>0</td><td>–</td><td>–</td><td>–</td></tr>
+<tr><td>Click "Show Matching Products"</td><td>1</td><td>–</td><td>1</td><td>–</td></tr>
+<tr><td>Open a suitable laptop</td><td>1</td><td>–</td><td>1</td><td>1</td></tr>
+<tr><th>Total</th><th>2</th><th>0</th><th>2</th><th>1</th></tr>
+</tbody>
+</table>
+</div>
+
+<h5>Interaction Count Comparison</h5>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Interaction</th>
+<th>Before (Amazon.sa)</th>
+<th>After (Specly)</th>
+<th>Reduction</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Clicks</td><td>4</td><td>2</td><td>50%</td></tr>
+<tr><td>Keystrokes</td><td>6</td><td>0</td><td>100%</td></tr>
+<tr><td>Screen Loads</td><td>3</td><td>2</td><td>33.3%</td></tr>
+<tr><td>Scrolls</td><td>1</td><td>1</td><td>0%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Specly reduces the interaction effort required to find a suitable laptop by eliminating the need to type a search query and reducing the number of clicks and screen loads. Its homepage quick filters present product criteria upfront, allowing users to access matching products more directly, while the number of scrolls remains unchanged.</p>
 
 <h3 id="gr2-screens">8. Screenshots</h3>
 <figure class="shot"><figcaption class="cap-top">Task 1 – Find a Product: Home</figcaption><img src="images/task1-home.png" alt="Specly home page with budget and category chips, category cards and product rows"><p class="patterns"><strong>Patterns:</strong> Clear Entry Points (budget and category chips), Grid of Equals (category cards and product cards), visual hierarchy.</p></figure>
