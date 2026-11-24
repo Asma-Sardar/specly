@@ -346,74 +346,77 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-a
 <h3 id="gr2-taps">7. Count the Taps</h3>
 
 <h5>Task 1: Find a Product</h5>
-<p><strong>Scenario:</strong> Find a suitable laptop for university within a budget of SAR 1,000–3,000.</p>
+
+<p><strong>Scenario:</strong> Find a suitable laptops for university within a budget of SAR 1,000–3,000.</p>
 
 <h5>Before – Amazon.sa</h5>
+
 <div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Action</th>
-<th>Clicks</th>
-<th>Keystrokes</th>
-<th>Screen Loads</th>
-<th>Scrolls</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Click the search bar</td><td>1</td><td>–</td><td>–</td><td>–</td></tr>
-<tr><td>Type in "Laptop"</td><td>–</td><td>6</td><td>–</td><td>–</td></tr>
-<tr><td>Click the search button</td><td>1</td><td>–</td><td>1</td><td>–</td></tr>
-<tr><td>Select the price range filter</td><td>1</td><td>–</td><td>1</td><td>1</td></tr>
-<tr><td>Open a suitable laptop</td><td>1</td><td>–</td><td>1</td><td>–</td></tr>
-<tr><th>Total</th><th>4</th><th>6</th><th>3</th><th>1</th></tr>
-</tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>Clicks</th>
+        <th>Keystrokes</th>
+        <th>Screen Loads</th>
+        <th>Scrolls</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Click the search bar</td><td>1</td><td>-</td><td>-</td><td>-</td></tr>
+      <tr><td>Type in “Laptop”</td><td>-</td><td>6</td><td>-</td><td>-</td></tr>
+      <tr><td>Click the search button</td><td>1</td><td>-</td><td>1</td><td>-</td></tr>
+      <tr><td>Select the price range filter</td><td>1</td><td>-</td><td>1</td><td>1</td></tr>
+      <tr><td>Open a suitable laptop</td><td>1</td><td>-</td><td>1</td><td>-</td></tr>
+      <tr><th>Total</th><th>4</th><th>6</th><th>3</th><th>1</th></tr>
+    </tbody>
+  </table>
 </div>
 
 <h5>After – Specly</h5>
+
 <div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Action</th>
-<th>Clicks</th>
-<th>Keystrokes</th>
-<th>Screen Loads</th>
-<th>Scrolls</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>View preselected homepage quick filters</td><td>0</td><td>–</td><td>–</td><td>–</td></tr>
-<tr><td>Click "Show Matching Products"</td><td>1</td><td>–</td><td>1</td><td>–</td></tr>
-<tr><td>Open a suitable laptop</td><td>1</td><td>–</td><td>1</td><td>1</td></tr>
-<tr><th>Total</th><th>2</th><th>0</th><th>2</th><th>1</th></tr>
-</tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>Clicks</th>
+        <th>Keystrokes</th>
+        <th>Screen Loads</th>
+        <th>Scrolls</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Apply homepage quick filters</td><td>1</td><td>-</td><td>-</td><td>-</td></tr>
+      <tr><td>Click “Show Matching Products”</td><td>1</td><td>-</td><td>1</td><td>-</td></tr>
+      <tr><td>Open a suitable laptop</td><td>1</td><td>-</td><td>1</td><td>1</td></tr>
+      <tr><th>Total</th><th>3</th><th>0</th><th>2</th><th>1</th></tr>
+    </tbody>
+  </table>
 </div>
 
-<h5>Interaction Count Comparison</h5>
+<h5>Interaction count comparison</h5>
+
 <div class="table-wrap">
-<table>
-<thead>
-<tr>
-<th>Interaction</th>
-<th>Before (Amazon.sa)</th>
-<th>After (Specly)</th>
-<th>Reduction</th>
-</tr>
-</thead>
-<tbody>
-<tr><td>Clicks</td><td>4</td><td>2</td><td>50%</td></tr>
-<tr><td>Keystrokes</td><td>6</td><td>0</td><td>100%</td></tr>
-<tr><td>Screen Loads</td><td>3</td><td>2</td><td>33.3%</td></tr>
-<tr><td>Scrolls</td><td>1</td><td>1</td><td>0%</td></tr>
-</tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th>Interaction</th>
+        <th>Before (Amazon.sa)</th>
+        <th>After (Specly)</th>
+        <th>Reduction</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Clicks</td><td>4</td><td>3</td><td>25%</td></tr>
+      <tr><td>Keystrokes</td><td>6</td><td>0</td><td>100%</td></tr>
+      <tr><td>Screen Loads</td><td>3</td><td>2</td><td>33.3%</td></tr>
+      <tr><td>Scrolls</td><td>1</td><td>1</td><td>0%</td></tr>
+    </tbody>
+  </table>
 </div>
 
-<p>Specly reduces the interaction effort required to find a suitable laptop by eliminating the need to type a search query and reducing the number of clicks and screen loads. Its homepage quick filters present product criteria upfront, allowing users to access matching products more directly, while the number of scrolls remains unchanged.</p>
-
+<p>Specly reduces the overall interaction effort by eliminating the need to type a search query and reducing the number of clicks and screen loads. The homepage quick filters allow users to narrow down their product choices more directly, while the number of scrolls remains unchanged.</p>
 <h3 id="gr2-screens">8. Screenshots</h3>
 <figure class="shot"><figcaption class="cap-top">Task 1 – Find a Product: Home</figcaption><img src="images/task1-home.png" alt="Specly home page with budget and category chips, category cards and product rows"><p class="patterns"><strong>Patterns:</strong> Clear Entry Points (budget and category chips), Grid of Equals (category cards and product cards), visual hierarchy.</p></figure>
 <figure class="shot"><figcaption class="cap-top">Task 2 – Evaluate a Product: Product page</figcaption><img src="images/task2-product.png" alt="Product page for the Apple MacBook Air 13-inch with large image, description, similar products and reviews"><p class="patterns"><strong>Patterns:</strong> Center Stage (large product image), visual hierarchy, Titled Sections (description, More Like This, reviews).</p></figure>
